@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url("../../../../fonts/Montserrat-SemiBold.ttf");
+}
+
+.leaflet-container .leaflet-control-attribution {
+    display: none !important; 
+}
+
+.background {
+    background-color: #ebedf6;
+    padding-bottom: 60;
+}
+
+.marking {
+    max-width: 1180;
+    margin: 0 auto;
+    height: 600;
+}
+
+.title {
+    font-size: 37;
+    padding-top: 55;
+    background-color: #ebedf6;
+    font-family: Montserrat-bold, sans-serif;
+}
+
+.container_link {
+    display: flex;
+    margin-top: 40;
+    width: 100%;
+    height: 475;
+    border-radius: 20;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 11px #9e8d9e;
+    -moz-box-shadow: 0 0 11px #9e8d9e;
+    box-shadow: 0 0 11px #7c717c;
+}
+
+.location {
+    width: 850;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contact {
+    width: 350;
+    height: 100%;
+    padding: 35;
+    background-color: #314feb;
+
+}
+
+.container_contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40;
+}
+
+.contact_item {
+    display: flex;
+}
+
+.contact_logo {
+    margin-top: 10;
+}
+
+.contact_logo img {
+    width: 40;
+    height: 40;
+}
+
+.container_text {
+    margin-left: 25;
+}
+
+.contact_title {
+    font-size: 23;
+    font-family: Montserrat-SemiBold,sans-serif;
+    color: #fff;
+}
+
+.contact_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 15;
+    margin: 5 auto;
+    color: #fff;
+    opacity: 0.7;
+}

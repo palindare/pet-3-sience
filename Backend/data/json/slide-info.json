@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "img": "http://localhost:3001/images/slide-info/ico-refer.png",
+        "title_1": "НАШИ",
+        "title_2": "РЕФЕРЕНСНЫЕ ЦЕНТРЫ",
+        "color": "#516f85",
+        "pad": "15"
+    },
+    {
+        "id": 2,
+        "img": "http://localhost:3001/images/slide-info/inpatientam.png",
+        "title_1": "ИНОСТРАННЫМ ПАЦИЕНТАМ",
+        "color": "#0f6296",
+        "pad": "15"
+    },
+    {   
+        "id": 3,
+        "img": "http://localhost:3001/images/slide-info/safety-day.png",
+        "title_1": "Всемирный день безопасности",
+        "title_2": "пациентов",
+        "color": "#ff003c",
+        "pad": "15"
+    },
+    {   
+        "id": 4,
+        "img": "http://localhost:3001/images/slide-info/vnimanie_obr.png",
+        "title_1": "Cправочные материалы о механизме и правилах приема на целевое обучение по программам высшего образования 2024/2025",
+        "color": "#ef3300",
+        "pad": "6"
+    },
+    {   
+        "id": 5,
+        "img": "http://localhost:3001/images/slide-info/vnimanie-family.png",
+        "title_1": "ВАЖНАЯ ИНФОРМАЦИЯ",
+        "title_2": "РОДИТЕЛЯМ И ПАЦИЕНТАМ",
+        "color": "#ff003c",
+        "pad": "15"
+    },
+    {   
+        "id": 6,
+        "img": "http://localhost:3001/images/slide-info/vnimanie-substances.png",
+        "title_1": "ВАЖНАЯ ИНФОРМАЦИЯ",
+        "title_2": "О ВРЕДЕ ПОТРЕБЛЕНИЯ",
+        "title_3": "НИКОТИНСОДЕРЖАЩЕЙ",
+        "title_4": "ПРОДУКЦИИ",
+        "color": "#ff9000",
+        "pad": "15"
+    }
+]

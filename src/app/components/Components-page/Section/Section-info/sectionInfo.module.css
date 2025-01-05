@@ -1,0 +1,231 @@
+@font-face {
+    font-family: Montserrat-bold;
+    src: url("../../../../fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: Montserrat-medium;
+    src: url("../../../../fonts/Montserrat-Medium.ttf");
+}
+
+.marking {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-top: 55;
+}
+
+.container_info {
+
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat-bold,sans-serif;
+}
+
+.title_text {
+    font-size: 40;
+}
+
+.marking_more {
+    margin: 15 0 7 0;
+}
+
+.container_more {
+    user-select: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background-color: #0722a7;
+    padding: 6 12 6 12;
+    border-radius: 20;
+    transition: all 0.15s ease-out;
+}
+
+.container_more:hover {
+    background-color: #0529df;
+}
+
+.container_more span {
+    color: #fff;
+    font-size: 12;
+}
+
+.container_tabs {
+    display: flex;
+    margin-top: 25;
+    gap: 25;
+}
+
+.tab {
+    position: relative;
+    cursor: pointer;
+    width: 450;
+    height: 200;
+    border-radius: 20;
+    -webkit-box-shadow: 0px 0px 11px 0px rgba(158,141,158,1);
+    -moz-box-shadow: 0px 0px 11px 0px rgba(158,141,158,1);
+    box-shadow: 0px 0px 11px 0px rgba(158,141,158,1);
+}
+
+.tab:hover .overflow {
+    opacity: 0.4;
+}
+
+.tab:hover .date_tab {
+    opacity: 1;
+}
+
+.tab:hover .link_tab {
+    opacity: 1;
+}
+
+.tab:hover .container_img img {
+}
+
+.overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20;
+    background-color: #000;
+    transition: all .2s ease-out;
+    opacity: 0;
+    z-index: 3;
+}
+
+.container_tab {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: Montserrat-bold,sans-serif;
+    -webkit-text-shadow: 0px 0px 6px #000;
+    -moz-text-shadow: 0px 0px 6px #000;
+    text-shadow: 0 0 6px #000;
+}
+
+.container_tab span {
+    font-size: 18;
+    z-index: 2;
+}
+
+.title_tab {
+    position: absolute;
+    top: 20;
+    left: 20;
+    z-index: 3;
+}
+
+.date_tab {
+    position: absolute;
+    left: 20;
+    bottom: 18;
+    z-index: 3;
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
+.link_tab {
+    position: absolute;
+    right: 20;
+    bottom: 18;
+    z-index: 3;
+    opacity: 0;
+    transition: all .2s ease-out;
+}
+
+.container_img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20;
+    object-fit: cover;
+    transition: all .2s ease-out;
+}
+
+.marking_more_mobile {
+    display: none;
+    padding: 15 0 7 0;
+}
+
+@media (max-width: 1220px) {
+    .marking {
+        max-width: 1000;
+    }
+    
+    .title {
+        align-items: center;
+    }
+
+    .container_more {
+        padding: 12 18;
+    }
+
+    .container_more span {
+        font-size: 16;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .marking {
+        padding: 55 20 0 20;
+    }
+
+    .title {
+        align-items: center;
+    }
+
+    .container_more {
+        padding: 12 18;
+    }
+
+    .container_more span {
+        font-size: 18;
+    }
+
+    .container_tabs {
+        flex-direction: column;
+    }
+
+    .tab {
+        height: 155;
+        width: 100%;
+    }
+
+    .title_tab span {
+        font-size: 20;
+    }
+}
+
+@media (max-width: 425px) {
+    .title {
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .marking_more {
+        display: none;
+    }
+
+    .marking_more_mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container_more {
+        text-align: center;
+        font-family: Montserrat-medium,sans-serif;
+        width: 200;
+    }
+
+    .container_more span {
+        width: 100%;
+    }
+
+}
