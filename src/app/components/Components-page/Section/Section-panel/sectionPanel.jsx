@@ -1,6 +1,6 @@
 "use client"
 import styles from "./sectionPanel.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import favorite_project_1_img from "../images/favorite_project_1.webp"
 import favorite_project_2_img from "../images/favorite_project_2.jpg"
@@ -12,7 +12,16 @@ function SectionPanel() {
     const [currentPageX, setCurrentPageX] = useState(0)
     const [changePageX, setChangePageX] = useState(0)
     const [positionX, setPositionX] = useState(0)
-    
+    const [sliderWidth,setSliderWidth] = useState(0)
+    const [tabWidth, setTabWidth] = useState(0)
+    const sliderRef = useRef(null)
+    const tabRef = useRef(null)
+
+    useEffect(() => {
+        setSliderWidth(sliderRef.current.clientWidth)
+        setTabWidth(tabRef.current.clientWidth + 12)
+    }, [sliderRef,tabRef])
+
     const data = 
     [
         {
@@ -52,7 +61,7 @@ function SectionPanel() {
             const x = e.pageX - currentPageX;
             const newPosition = changePageX + x
             const maxPosition = 0;
-            const minPosition = -949;
+            const minPosition = -((data.length * tabWidth) - sliderWidth);
             if (newPosition <= maxPosition && newPosition >= minPosition) {
                 setPositionX(newPosition)
             } else if (newPosition >= maxPosition) {
@@ -65,7 +74,6 @@ function SectionPanel() {
 
     const mouseUp = (e) => {
         setIsDraging(false)
-
     }
 
     return (
@@ -75,12 +83,12 @@ function SectionPanel() {
                 <div className={styles.title}>
                     <span>Избранные проекты</span>
                 </div>
-                <div onMouseDown={(e) => mouseDown(e)}  className={styles.slider}>
+                <div ref={sliderRef} onMouseDown={(e) => mouseDown(e)}  className={styles.slider}>
                     <div style={{transform:`translateX(${positionX}px)`}}>
                         {data.map(({id,title,category,img},index) => {
                             return (
                                 <>
-                                <div key={index} style={{transform: `translateX(${index * 103}%)`}} className={styles.slider_tab}>
+                                <div ref={tabRef} key={index} style={{transform: `translateX(${index * 103}%)`}} className={styles.slider_tab}>
                                     <div className={styles.container_tab}>
                                         <div className={styles.container_img}>
                                             <Image src={img} alt="image"/>

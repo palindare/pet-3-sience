@@ -83,3 +83,9 @@
     border-radius: 20;
     background-color: #08093ea1;
 }
+
+@media (max-width: 1024px) {
+    .title span {
+        margin: 0px 0px 0px 20px;
+    }
+}
