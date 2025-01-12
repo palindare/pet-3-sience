@@ -52,13 +52,13 @@ function SectionPanel() {
 
     const mouseDown = (e) => {
         setIsDraging(true)
-        setCurrentPageX(e.pageX)
+        setCurrentPageX(e.type === "touchstart" ? e.touches[0].pageX : e.pageX)
         setChangePageX(positionX)
     }
 
     const mouseMove = (e) => {
         if(isDraging) {
-            const x = e.pageX - currentPageX;
+            const x = e.type === "touchmove" ? e.touches[0].pageX - currentPageX : e.pageX - currentPageX;
             const newPosition = changePageX + x
             const maxPosition = 0;
             const minPosition = -((data.length * tabWidth) - sliderWidth);
@@ -78,12 +78,12 @@ function SectionPanel() {
 
     return (
     <>
-        <div onMouseMove={(e) => mouseMove(e)} onMouseUp={(e) => mouseUp(e)} className={styles.marking}>
+        <div onTouchMove={(e) => mouseMove(e)} onTouchEnd={(e) =>  mouseUp(e)} onMouseMove={(e) => mouseMove(e)} onMouseUp={(e) => mouseUp(e)} className={styles.marking}>
             <div className={styles.contaner_panel}>
                 <div className={styles.title}>
                     <span>Избранные проекты</span>
                 </div>
-                <div ref={sliderRef} onMouseDown={(e) => mouseDown(e)}  className={styles.slider}>
+                <div ref={sliderRef} onTouchStart={(e) => mouseDown(e) } onMouseDown={(e) => mouseDown(e)}  className={styles.slider}>
                     <div style={{transform:`translateX(${positionX}px)`}}>
                         {data.map(({id,title,category,img},index) => {
                             return (
