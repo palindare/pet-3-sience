@@ -85,20 +85,12 @@
 }
 
 @media (max-width: 1220px) {
-    .title span {
-        margin: 0px 0px 0px 20px;
-    }
-
     .contaner_panel {
         max-width: 1000px;
     }
 }
 
 @media (max-width: 1024px) {
-    .title span {
-        margin: 0px 0px 0px 20px;
-    }
-
     .contaner_panel {
         padding: 0px 20px;
     }

@@ -10,6 +10,7 @@
 .marking {
     max-width: 1180px;
     margin: 0 auto;
+    padding-top: 60px;
     padding-bottom: 50;
 }
 
@@ -20,7 +21,6 @@
 
 .panel {
     width: 100%;
-    max-height: 0;
     background-color: #314feb;
     border-radius: 10;
     -webkit-box-shadow: 0 0 11px #9e8d9e;
@@ -43,7 +43,6 @@
     display: flex;
     user-select: none;
     cursor: pointer;
-    align-items: center;
     justify-content: space-between;
     margin-top: 15;
     padding-inline: 17;
@@ -82,4 +81,36 @@
     height: 20;
     margin-bottom: 20;
 
+}
+
+@media (max-width: 1220px) {
+    .marking {
+        max-width: 1000px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .container_panel {
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .marking {
+        padding-top: 180px;
+    }
+
+    .title_text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .marking {
+        padding-top: 210px;
+    }
+    .content_text {
+        margin-bottom: 20px;
+    }
 }

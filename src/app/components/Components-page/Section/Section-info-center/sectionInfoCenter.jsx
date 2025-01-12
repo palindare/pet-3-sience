@@ -15,7 +15,7 @@ function SectionInfoCenter() {
       <div className={styles.background}>
         <div className={styles.marking}>
           <div className={styles.container_panel}>
-            <div style={{maxHeight: showSchemeCenter ? "500px" : "60px"}} className={styles.panel}>
+            <div style={{maxHeight: showSchemeCenter ? "1000px" : "60px"}} className={styles.panel}>
               <div className={styles.content}>
                 <div onClick={() => setShowSchemeCenter(!showSchemeCenter)} className={styles.title}>
                   <div className={styles.title_text}>Схема Центра</div>
@@ -56,7 +56,7 @@ function SectionInfoCenter() {
                 </div>
               </div>
             </div>
-            <div style={{maxHeight: showCentersFacts ? "500px" : "60px"}} className={styles.panel}>
+            <div style={{maxHeight: showCentersFacts ? "2000px" : "60px"}} className={styles.panel}>
               <div className={styles.content}>
                 <div onClick={() => setShowCentersFacts(!showCentersFacts)} className={styles.title}>
                   <div className={styles.title_text}>Цифры и факты</div>
@@ -97,7 +97,7 @@ function SectionInfoCenter() {
                 </div>
               </div>
             </div>
-            <div style={{maxHeight: showlegislation ? "500px" : "60px"}} className={styles.panel}>
+            <div style={{maxHeight: showlegislation ? "2000px" : "60px"}} className={styles.panel}>
               <div className={styles.content}>
                 <div onClick={() => setShowlegislation(!showlegislation)} className={styles.title}>
                   <div className={styles.title_text}>Законодательство и нормативные документы</div>
@@ -138,7 +138,7 @@ function SectionInfoCenter() {
                 </div>
               </div>
             </div>
-            <div style={{maxHeight: showAntiCorruption ? "500px" : "60px"}} className={styles.panel}>
+            <div style={{maxHeight: showAntiCorruption ? "2000px" : "60px"}} className={styles.panel}>
               <div className={styles.content}>
                 <div onClick={() => setShowAntiCorruption(!showAntiCorruption)} className={styles.title}>
                   <div className={styles.title_text}>Противодействие коррупции</div>
