@@ -10,8 +10,8 @@
 .marking {
     max-width: 1180px;
     margin: 0 auto;
-    padding-top: 60px;
-    padding-bottom: 50;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }
 
 .container_panel {
@@ -86,6 +86,7 @@
 @media (max-width: 1220px) {
     .marking {
         max-width: 1000px;
+        padding-top: 20px;
     }
 
 }
@@ -98,7 +99,7 @@
 
 @media (max-width: 700px) {
     .marking {
-        padding-top: 180px;
+        padding-top: 160px;
     }
 
     .title_text {
@@ -108,7 +109,7 @@
 
 @media (max-width: 640px) {
     .marking {
-        padding-top: 210px;
+        padding-top: 190px;
     }
     .content_text {
         margin-bottom: 20px;

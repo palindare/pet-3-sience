@@ -28,7 +28,7 @@ const SliderLink = () => {
                 </div>
                 <div className={styles.container_link}>
                     <div className={styles.location}>
-                    <MapContainer attributionControl={false} center={[51.505, -0.09]} zoom={13} style={{ height: "100%", width: "100%" }}>
+                    <MapContainer attributionControl={false} zoomControl={false} center={[51.505, -0.09]} zoom={13} style={{ height: "100%", width: "100%" }}>
                             <TileLayer
                                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                             />
@@ -98,27 +98,3 @@ const SliderLink = () => {
 };
 
 export default SliderLink;
-    
-        // useEffect(() => {
-        //     const fetchData = async () => {
-        //         try {
-        //             const res = await fetch("http://localhost:3001/api/slide/info");
-                    
-        //             if (!res.ok) {
-        //                 throw new Error(`${res.status} ${res.statusText}`);
-        //             }
-    
-        //             const result = await res.json();
-    
-        //             if (!result || result.length === 0) {
-        //                 setData(null);
-        //             } else {
-        //                 setData(result);
-        //             }
-        //         } catch (e) {
-        //             console.error(e);
-        //         }
-        //     };
-    
-        //     fetchData(); 
-        // }, []); 

@@ -17,11 +17,7 @@ function SectionPanel() {
     const sliderRef = useRef(null)
     const tabRef = useRef(null)
 
-    useEffect(() => {
-        setSliderWidth(sliderRef.current.clientWidth)
-        setTabWidth(tabRef.current.clientWidth + 12)
-    }, [sliderRef,tabRef])
-
+    
     const data = 
     [
         {
@@ -49,13 +45,13 @@ function SectionPanel() {
             category: ["Машиностроение", "Программирование"]
         },
     ]
-
+    
     const mouseDown = (e) => {
         setIsDraging(true)
         setCurrentPageX(e.type === "touchstart" ? e.touches[0].pageX : e.pageX)
         setChangePageX(positionX)
     }
-
+    
     const mouseMove = (e) => {
         if(isDraging) {
             const x = e.type === "touchmove" ? e.touches[0].pageX - currentPageX : e.pageX - currentPageX;
@@ -71,13 +67,27 @@ function SectionPanel() {
             }
         }
     }
-
+    
     const mouseUp = (e) => {
         setIsDraging(false)
     }
+    
+    useEffect(() => {
+        setSliderWidth(sliderRef.current.clientWidth)
+        setTabWidth(tabRef.current.clientWidth + 12)
+
+        window.addEventListener("mouseup",mouseUp)
+        window.addEventListener("touchend",mouseUp)
+
+        return () => {
+            window.removeEventListener("mouseup", mouseUp);
+            window.removeEventListener("touchend", mouseUp);
+          };
+
+    }, [sliderRef,tabRef])
 
     return (
-    <>
+        <>
         <div onTouchMove={(e) => mouseMove(e)} onTouchEnd={(e) =>  mouseUp(e)} onMouseMove={(e) => mouseMove(e)} onMouseUp={(e) => mouseUp(e)} className={styles.marking}>
             <div className={styles.contaner_panel}>
                 <div className={styles.title}>

@@ -12,7 +12,7 @@
     left: 0;
     height: 60;
     width: 100%;
-    z-index: 500;
+    z-index: 2000 !important;
     background-color: #020333;
 }
 
@@ -47,5 +47,9 @@
 @media (max-width: 1024px) {
     .marking {
         display: block;
+    }
+
+    .container_nav_adaptive {
+        z-index: 2000;
     }
 }
